@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr Acorn | Roblox Developer</title>
+  <meta name="description" content="Mr Acorn — Roblox Studio developer portfolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#home">MR <span>ACORN</span></a>
+    <nav><a href="#work">Work</a><a href="#videos">Videos</a><a href="#about">About</a><a href="#comments">Comments</a><a class="nav-button" href="#contact">Contact</a></nav>
+    <div class="auth-area"><button id="signInBtn" class="small-button">Sign in</button><button id="signOutBtn" class="small-button hidden">Sign out</button><span id="userLabel"></span></div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> ROBLOX STUDIO DEVELOPER</div>
+        <h1>BUILDING WORLDS<br><em>WORTH PLAYING.</em></h1>
+        <p>I create polished Roblox experiences, environments, and game-ready assets with a focus on detail, atmosphere, and clean presentation.</p>
+        <div class="hero-actions"><a class="button primary" href="#work">View My Work <span>↗</span></a><a class="button secondary" href="#contact">Let's Work Together</a></div>
+      </div>
+      <div class="hero-card reveal"><div class="hero-card-inner"><div class="corner-label">FEATURED BUILD</div><div class="media-placeholder large"><div class="placeholder-icon">＋</div><b>YOUR BEST BUILD</b><span>Add photos from the Admin Dashboard</span></div><div class="card-footer"><div><small>PROJECT</small><strong>Featured Experience</strong></div><div class="arrow">↗</div></div></div></div>
+    </section>
+
+    <section id="work" class="section"><div class="section-heading reveal"><div><div class="eyebrow"><span></span> SELECTED WORK</div><h2>MY <em>PROJECTS.</em></h2></div><p>Photos and projects can be managed from your admin account.</p></div><div id="projectGrid" class="project-grid"></div></section>
+
+    <section id="videos" class="section video-section"><div class="section-heading reveal"><div><div class="eyebrow"><span></span> VIDEO SHOWCASE</div><h2>SEE IT <em>IN ACTION.</em></h2></div><p>Videos added by the owner appear here automatically.</p></div><div id="videoGrid" class="video-grid"></div></section>
+
+    <section id="about" class="about section"><div class="about-panel reveal"><div class="eyebrow"><span></span> ABOUT MR ACORN</div><h2>MAKING ROBLOX<br><em>LOOK BETTER.</em></h2><p>I'm Mr Acorn, a Roblox Studio creator focused on building polished environments and memorable game spaces.</p></div><div class="about-side reveal"><div class="mini-stat"><strong>MR ACORN</strong><span>Roblox Username</span></div><div class="mini-stat"><strong>OPEN</strong><span>For commissions</span></div><div class="mini-stat"><strong>ROBLOX</strong><span>Primary platform</span></div></div></section>
+
+    <section id="comments" class="section comments-section"><div class="section-heading reveal"><div><div class="eyebrow"><span></span> COMMUNITY</div><h2>LEAVE A <em>COMMENT.</em></h2></div><p>Sign in with your own account to leave a comment.</p></div><div class="comment-box"><div id="commentLoginNotice" class="notice">You must sign in to leave a comment.</div><form id="commentForm" class="hidden"><textarea id="commentText" maxlength="500" placeholder="What do you think of the portfolio?" required></textarea><button class="button primary" type="submit">Post Comment</button></form><div id="commentsList" class="comments-list"></div></div></section>
+
+    <section id="admin" class="section admin-section hidden"><div class="section-heading"><div><div class="eyebrow"><span></span> OWNER ONLY</div><h2>ADMIN <em>DASHBOARD.</em></h2></div><p>Only the owner account can see these controls.</p></div><div class="admin-grid"><div class="admin-card"><h3>Add Video</h3><input id="videoTitle" placeholder="Video title"><input id="videoFile" type="file" accept="video/*"><button id="uploadVideoBtn" class="button primary">Upload Video</button><div id="uploadStatus"></div></div><div class="admin-card"><h3>Add Project Photo</h3><input id="projectTitle" placeholder="Project title"><input id="projectType" placeholder="Type, e.g. BUILD"><input id="projectFile" type="file" accept="image/*"><button id="uploadProjectBtn" class="button primary">Upload Photo</button><div id="projectStatus"></div></div><div class="admin-card"><h3>Moderate Comments</h3><p>Delete any comment directly from the comment list when you're signed in as owner.</p></div></div></section>
+
+    <section id="contact" class="contact section"><div class="contact-box reveal"><div class="eyebrow"><span></span> CONTACT</div><h2>HAVE A PROJECT<br><em>IN MIND?</em></h2><p>Interested in working together?</p><div class="contact-buttons"><a class="button primary" href="https://www.roblox.com/users/1591073647/profile" target="_blank" rel="noopener">Roblox Profile ↗</a><a class="button secondary" href="#" onclick="copyDiscord(); return false;">Copy Discord</a></div><small id="discordText">MrAcornDev</small></div></section>
+  </main>
+  <footer><div class="brand">MR <span>ACORN</span></div><p>ROBLOX STUDIO PORTFOLIO</p><span>© <span id="year"></span> Mr Acorn</span></footer>
+  <div id="authModal" class="modal hidden"><div class="modal-card"><button id="closeModal" class="close">×</button><h2>Sign in</h2><p>Use your email account to comment. Your owner account unlocks the admin dashboard.</p><button id="googleSignIn" class="button primary">Continue with Google</button></div></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
