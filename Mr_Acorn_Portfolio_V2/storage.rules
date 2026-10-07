@@ -1,0 +1,8 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function owner() { return request.auth != null && request.auth.token.email == 'everythinggabew@gmail.com'; }
+    match /videos/{allPaths=**} { allow read: if true; allow write, delete: if owner() && request.resource.size < 500 * 1024 * 1024; }
+    match /projects/{allPaths=**} { allow read: if true; allow write, delete: if owner() && request.resource.size < 20 * 1024 * 1024; }
+  }
+}
